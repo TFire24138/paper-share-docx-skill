@@ -87,14 +87,29 @@ Your local skill path should look like this:
 
 ## Usage
 
-Use it by name in your prompt:
+Use it by name in your prompt. A prior report is optional.
+
+### Without a style reference
+
+If you only provide a paper, the skill will use its built-in default paper-sharing format. This format is close to a typical Chinese lab-meeting report: paper metadata, background, motivation, method, experiments, ablations, limitations, personal interpretation, and a talk outline.
+
+```text
+使用 paper-share-docx，阅读这篇论文：
+https://arxiv.org/html/2604.10688
+
+生成一份 15-20 分钟中文论文分享 DOCX，适合导入飞书云文档。
+```
+
+### With a style reference
+
+If you provide a previous report, the skill will additionally imitate its structure, pacing, density, and explanation style.
 
 ```text
 使用 paper-share-docx，阅读这篇论文：
 https://arxiv.org/html/2604.10688
 
 参考 /Users/me/Desktop/ReconVLA.zip 里我之前的汇报风格，
-生成一份可导入飞书云文档的中文 DOCX 论文分享稿。
+生成一份 15-20 分钟中文论文分享 DOCX，适合导入飞书云文档。
 ```
 
 You can also ask it to clean up intermediate files:
@@ -110,12 +125,17 @@ For best results, provide:
 | Input | Example | Why it helps |
 |---|---|---|
 | Target paper | arXiv HTML/PDF link or local PDF | Gives the skill a source of truth |
-| Prior report | `.md`, `.docx`, `.pptx`, `.zip`, or folder | Lets the skill imitate your reporting style |
+| Prior report (optional) | `.md`, `.docx`, `.pptx`, `.zip`, or folder | Lets the skill imitate your reporting style when available |
 | Audience | classmates, lab group, engineers, etc. | Adjusts depth and vocabulary |
 | Duration | 10 min, 15-20 min, 30 min | Controls detail level |
 | Cleanup preference | keep or delete intermediates | Prevents accidental loss of useful drafts |
 
 ## Example Prompts
+
+```text
+使用 paper-share-docx，读这篇 arXiv 论文，
+生成一份 15-20 分钟中文论文分享 DOCX。
+```
 
 ```text
 使用 paper-share-docx，读这篇 arXiv 论文，参考我之前的 ReconVLA 汇报，

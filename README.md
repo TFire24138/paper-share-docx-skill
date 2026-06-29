@@ -108,7 +108,7 @@ If you provide a previous report, the skill will additionally imitate its struct
 使用 paper-share-docx，阅读这篇论文：
 https://arxiv.org/html/2604.10688
 
-参考 /Users/me/Desktop/ReconVLA.zip 里我之前的汇报风格，
+参考 /path/to/your/previous-report.zip 里我之前的汇报风格，
 生成一份 15-20 分钟中文论文分享 DOCX，适合导入飞书云文档。
 ```
 

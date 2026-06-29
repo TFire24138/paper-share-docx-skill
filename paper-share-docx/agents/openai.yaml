@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Share DOCX"
+  short_description: "Read a paper and produce a Chinese DOCX presentation report."
+  default_prompt: "Read this paper and create a Chinese paper-sharing DOCX report, using my prior report style if provided."
